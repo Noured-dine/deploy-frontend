@@ -30,3 +30,4 @@ dist-ssr
 /.dockerignore
 /Dockerfile
 /nginx.conf
+/src
