@@ -27,5 +27,3 @@ node_modules
 /src/home.css
 /.dockerignore
 /Dockerfile
-/nginx.conf
-/src
