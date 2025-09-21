@@ -68,6 +68,9 @@ jobs:
           }
           EOF
       
+      - name: Install production dependencies
+        run: npm install --production
+      
       - name: Upload deployment package
         uses: actions/upload-artifact@v4
         with:
@@ -76,6 +79,7 @@ jobs:
             dist/
             server.js
             package.json
+            node_modules/
 
   deploy:
     runs-on: ubuntu-latest
@@ -102,3 +106,4 @@ jobs:
           app-name: 'test-react'
           slot-name: 'Production'
           package: .
+          startup-file: 'node server.js'
